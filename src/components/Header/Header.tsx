@@ -4,13 +4,9 @@ interface IHeaderProps{
 }
 
 export function Header({}: IHeaderProps) {
-  let isLogin=true;
-  let userName=''
   return (
     <div className={styles.wrapper}>
-      <div className="user">{userName}</div>
-
-      <div className="logout">Exit</div>
+      <h1 className={styles.title}>Imaginary friends</h1>
     </div>
   );
 }

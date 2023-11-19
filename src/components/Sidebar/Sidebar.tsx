@@ -6,8 +6,8 @@ interface ISidebarProps{
 
 export function Sidebar({}: ISidebarProps) {
   return (
-    <div className={styles.wrapper}>
+    <aside className={styles.wrapper}>
       <Navigation/>
-    </div>
+    </aside>
   );
 }

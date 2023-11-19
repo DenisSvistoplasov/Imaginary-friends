@@ -6,6 +6,7 @@ interface IFooterProps{
 export function Footer({}: IFooterProps) {
   return (
     <div className={styles.wrapper}>
+      2023
     </div>
   );
 }

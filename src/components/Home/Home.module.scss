@@ -1,0 +1,44 @@
+.wrapper{
+  color: #fff;
+  text-shadow: 0 0 4px rgba($color: #000000, $alpha: .5);
+}
+.inner{
+  display: grid;
+  grid-template: 
+  'desc1 img1' 170px
+  'img2 desc2' 170px
+  'desc3 desc3' /
+  1fr 1fr;
+  max-width: 455px;
+  margin: 0 auto;
+}
+.title{
+text-align: center;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+p{
+  font-size: 22px;
+  align-self: center;
+  text-align: center;
+}
+
+.img1{
+  grid-area: img1;
+}
+.description1{
+  grid-area: desc1;
+}
+.img2{
+  grid-area: img2;
+
+}
+.description2{
+  grid-area: desc2;
+}
+.description3{
+  grid-area: desc3;
+}

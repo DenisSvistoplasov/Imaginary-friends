@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { authReducer } from "./auth";
-import { usersReducer } from "./users";
+import { friendsReducer } from "./friends";
 
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
-    users: usersReducer
+    friends: friendsReducer
   }
 });
 

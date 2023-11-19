@@ -1,12 +1,12 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "./store";
 
-export const logIn = createAsyncThunk(
-  'auth/login',
-  async () => {
+// export const logIn = createAsyncThunk(
+//   'auth/login',
+//   async () => {
     
-  }
-)
+//   }
+// )
 
 interface AuthSlice {
   data: {
@@ -46,5 +46,5 @@ export const authSlice = createSlice({
 export const authReducer = authSlice.reducer;
 export const { logIn, logOut } = authSlice.actions;
 
-export const selectIsAuth = (state: RootState) => state.auth.isAuth;
-export const selectLogin = (state: RootState) => state.auth.login;
+export const selectIsAuth = (state: RootState) => state.auth.data.isAuth;
+export const selectLogin = (state: RootState) => state.auth.data.login;

@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Navigation.module.scss';
 import { Paths } from '../../../constants/paths';
 
@@ -15,10 +15,9 @@ export function Navigation({}: INavigationProps) {
 
   return (
     <nav className={styles.wrapper}>
-      <ul className="list">
-        <li className="item"><NavLink className={linkClassName} to={Paths.profile}>Profile</NavLink></li>
-        <li className="item"><NavLink className={linkClassName} to={Paths.users}>Users</NavLink></li>
-        <li className="item"><NavLink className={linkClassName} to={Paths.settings}>Settings</NavLink></li>
+      <ul className={styles.list}>
+        <li className={styles.item}><NavLink className={linkClassName} to={Paths.home}>Home</NavLink></li>
+        <li className={styles.item}><NavLink className={linkClassName} to={Paths.friends}>Friends</NavLink></li>
       </ul>
     </nav>
   );

@@ -1,20 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
 import styles from './Content.module.scss';
-import { Profile } from '../Profile/Profile';
+import { Home } from '../Home/Home';
 import { Paths } from '../../constants/paths';
-import { Users } from '../Users/Users';
 import { Settings } from '../Settings/Settings';
+import { Friends } from '../Friends/Friends';
 
-interface IContentProps{
+interface IContentProps {
 }
 
 export function Content({}: IContentProps) {
   return (
     <div className={styles.wrapper}>
       <Routes>
-        <Route path={Paths.profile} Component={Profile}/>
-        <Route path={Paths.users} Component={Users}/>
-        <Route path={Paths.settings} Component={Settings}/>
+        <Route path={Paths.home} Component={Home} />
+        <Route path={Paths.friends} Component={Friends} />
       </Routes>
     </div>
   );

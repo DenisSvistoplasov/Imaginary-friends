@@ -1,6 +1,6 @@
 import { ReactNode, useRef } from 'react';
 import styles from './WithPreloader.module.scss';
-import { Loader } from './Loader/Loader';
+import { Loader } from '../Loader/Loader';
 import { classnames } from '../../utils/classnames';
 
 interface IWithPreloaderProps {

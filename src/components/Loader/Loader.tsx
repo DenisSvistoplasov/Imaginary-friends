@@ -1,4 +1,4 @@
-import { classnames } from '../../../utils/classnames';
+import { classnames } from '../../utils/classnames';
 import styles from './Loader.module.scss';
 
 export function Loader({ className = '', size = 100, dark = false, center = false }) {
@@ -9,5 +9,5 @@ export function Loader({ className = '', size = 100, dark = false, center = fals
       [styles.dark]: dark,
       [styles.center]: center
     });
-  return <div className={classes} style={{fontSize:size}}></div>;
+  return <div className={classes} style={{ fontSize: size }}></div>;
 }
