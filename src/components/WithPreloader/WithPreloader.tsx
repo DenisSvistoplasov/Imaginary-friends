@@ -16,7 +16,7 @@ export function WithPreloader({ isLoading, children, className }: IWithPreloader
       <div className={styles.inner}>
         {children}
       </div>
-      {isLoading && <Loader className={styles.loader} />}
+      {isLoading && <Loader className={styles.loader} dark/>}
     </div>
   );
 }

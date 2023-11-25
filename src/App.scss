@@ -1,0 +1,22 @@
+@use './mixins.scss' as *;
+
+.app {
+  display: grid;
+  grid-template: 
+  'header header' min-content
+  'sidebar content' auto
+  'footer footer' 50px
+  / min-content auto;
+  height: 100vh;
+
+  @include withMobile{
+    grid-template: 
+  'header' min-content
+  'sidebar' min-content
+  'content' 1fr
+  'footer' 50px;
+  }
+}
+
+
+

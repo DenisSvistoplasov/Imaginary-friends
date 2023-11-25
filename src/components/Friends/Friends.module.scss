@@ -1,11 +1,36 @@
-.wrapper{
+@use '../../mixins.scss' as *;
+
+.wrapper {
   width: 100%;
   height: 100%;
 }
-.list{
+
+.list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 170px);
+  grid-template-columns: repeat(auto-fit, 164px);
   gap: 10px;
   justify-content: center;
   padding: 10px;
+
+  @include withTablet {
+    grid-template-columns: repeat(auto-fit, 145px);
+  }
+}
+
+$pink: #f5a;
+$light: rgba(#fff, .6);
+
+.addBtn {
+  position: sticky;
+  top: 5px;
+  z-index: 1;
+  display: block;
+  width: 108px;
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 8px $pink, 0 0 12px 1px $pink, 0 0 16px 2px $pink;
+  @include glitter($pink, $light);
 }

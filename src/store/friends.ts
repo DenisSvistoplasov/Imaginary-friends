@@ -39,13 +39,20 @@ export const friendsSlice = createSlice({
   reducers: {
     addFriend(state, action: PayloadAction<IFriend>) {
       state.data.push(action.payload);
-    }
+    },
+    editFriend(state, action: PayloadAction<IFriend>) {
+      const index = state.data.findIndex(friend => friend.id === action.payload.id);
+      state.data[index] = action.payload;
+    },
+    deleteFriend(state, action: PayloadAction<string>) {
+      state.data = state.data.filter(friend => friend.id !== action.payload);
+    },
   }
 });
 
 export const friendsReducer = friendsSlice.reducer;
 
-export const { addFriend } = friendsSlice.actions;
+export const { addFriend, editFriend, deleteFriend } = friendsSlice.actions;
 
 export const selectFriendsData = (state: RootState) => state.friends.data;
 export const selectFriendsMeta = (state: RootState) => state.friends.meta;

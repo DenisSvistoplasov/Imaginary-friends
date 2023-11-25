@@ -1,7 +1,41 @@
+@use '../../../mixins.scss' as *;
 
-.link{
-  text-transform: uppercase;
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 10px 0;
 }
-.active{
-  outline: 2px solid orange;
+
+.link {
+  display: block;
+  padding: 0 10px;
+  border-right: 5px solid transparent;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  @include textShadow;
+}
+
+$active-color: #fd9;
+
+.link.active {
+  color: $active-color;
+  border-color: $active-color;
+  cursor: auto;
+}
+
+@include withMobile {
+  .list {
+    flex-direction: row;
+    gap: 15px;
+    padding: 7px 15px;
+  }
+
+  .link {
+    padding: 2px 0;
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid transparent;
+  }
 }

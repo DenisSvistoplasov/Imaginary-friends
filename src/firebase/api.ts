@@ -1,6 +1,6 @@
 import { auth, db } from "./firebase";
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
-import { setDoc, doc, updateDoc, getDoc, collection, query, getDocs } from "firebase/firestore/lite";
+import { setDoc, doc, updateDoc, getDoc, collection, query, getDocs, deleteDoc } from "firebase/firestore/lite";
 import { loginToEmail } from "../utils/login_email";
 import { IFriend } from "../types/friend";
 import { createId } from "../utils/createId";
@@ -15,8 +15,13 @@ export const friendsAPI = {
     snapshot.forEach(doc => res.push(doc.data() as IFriend));
     return res;
   },
-  async createFriend(friend: Partial<IFriend>) {
-    const id = createId();
-    return setDoc(doc(friendsRef, id), { ...friend, id });
-  }
+  async createFriend(friend: IFriend) {
+    return setDoc(doc(friendsRef, friend.id), friend);
+  },
+  async editFriend(friend: IFriend) {
+    return setDoc(doc(friendsRef, friend.id), friend);
+  },
+  async deleteFriend(id: string) {
+    return deleteDoc(doc(friendsRef, id));
+  },
 };

@@ -1,0 +1,162 @@
+@use '../../mixins.scss' as *;
+
+$pink: #f5a;
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 170px;
+  padding: 45px 45px 30px;
+  // border-radius: 60px 60px 0;
+  border-radius: 50%;
+  background-color: $pink;
+
+  @include withMobile {
+    gap: 10px;
+    padding: 40px 30px 30px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: -1;
+    width: 150px;
+    aspect-ratio: 250/307;
+    background: url(/assets/images/confirm.webp) no-repeat center / contain;
+    transform: translate(100px);
+
+    @include withTablet {
+      width: 120px;
+      transform: translate(70px);
+    }
+
+    @include withMobile {
+      width: 100px;
+      transform: translate(50px);
+    }
+  }
+
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  aspect-ratio: 4/1;
+
+  @include withMobile {
+    gap: 10px;
+  }
+}
+
+.text {
+  max-width: 40vw;
+  margin: 0;
+  text-align: center;
+  font-size: 26px;
+
+  i {
+    font-weight: 600;
+    font-size: 27px;
+    text-shadow: 0 0 5px rgba(#00f, .6);
+
+    @include withMobile {
+      font-size: 21px;
+    }
+  }
+
+  @include withMobile {
+    font-size: 20px;
+  }
+}
+
+.imgWrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 60px;
+  aspect-ratio: 3/4;
+  border: 3px solid #302;
+  border-radius: 5px;
+  background-color: #eac;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    width: 100%;
+    height: 7px;
+    background-color: #000;
+    transform: rotate(-45deg);
+  }
+
+  @include withMobile {
+    width: 50px;
+  }
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  min-width: 60px;
+  padding: 5px 10px 3px;
+  background-color: #fff;
+  border-bottom: 2px solid transparent;
+  border-radius: 3px;
+  color: #f3a;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition-property: color, border-color;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+
+.yes:hover {
+  color: #f13;
+  border-bottom-color: #f13;
+}
+
+.no:hover {
+  color: #0c3;
+  border-bottom-color: #0c3;
+}
+
+.tail {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  z-index: -1;
+  width: 150px;
+  height: auto;
+  transform: translate(-25%);
+
+
+
+  @include withTablet {
+    width: 120px;
+  }
+
+  @include withMobile {
+    width: 100px;
+  }
+
+  path {
+    fill: $pink;
+  }
+}
