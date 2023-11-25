@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.e67d84a3.css",
-    "main.js": "/my-app/static/js/main.03b3c83a.js",
+    "main.css": "/my-app/static/css/main.322b56bf.css",
+    "main.js": "/my-app/static/js/main.bd462c2d.js",
     "static/js/787.d4aba7ab.chunk.js": "/my-app/static/js/787.d4aba7ab.chunk.js",
+    "static/media/bob.webp": "/my-app/static/media/bob.593a177f7462bd56a2b7.webp",
+    "static/media/friend_bg.webp": "/my-app/static/media/friend_bg.401c65a4ce8dd2342d9e.webp",
+    "static/media/patrik.webp": "/my-app/static/media/patrik.46b2198dc4bfbe0f4d91.webp",
+    "static/media/defaultFriendImage.webp": "/my-app/static/media/defaultFriendImage.c00f9ead272da9c630ed.webp",
+    "static/media/confirm.webp": "/my-app/static/media/confirm.5f9556b42625c8416d80.webp",
     "index.html": "/my-app/index.html",
-    "main.e67d84a3.css.map": "/my-app/static/css/main.e67d84a3.css.map",
-    "main.03b3c83a.js.map": "/my-app/static/js/main.03b3c83a.js.map",
+    "main.322b56bf.css.map": "/my-app/static/css/main.322b56bf.css.map",
+    "main.bd462c2d.js.map": "/my-app/static/js/main.bd462c2d.js.map",
     "787.d4aba7ab.chunk.js.map": "/my-app/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e67d84a3.css",
-    "static/js/main.03b3c83a.js"
+    "static/css/main.322b56bf.css",
+    "static/js/main.bd462c2d.js"
   ]
 }
