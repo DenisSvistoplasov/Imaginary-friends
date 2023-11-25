@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-app/static/css/main.8d07776f.css",
-    "main.js": "/my-app/static/js/main.bd462c2d.js",
+    "main.js": "/my-app/static/js/main.c81e15ea.js",
     "static/js/787.d4aba7ab.chunk.js": "/my-app/static/js/787.d4aba7ab.chunk.js",
     "static/media/comicneue-italic-webfont.woff": "/my-app/static/media/comicneue-italic-webfont.a5f2392d3ef7ac47b0b9.woff",
     "static/media/comicneue-bolditalic-webfont.woff": "/my-app/static/media/comicneue-bolditalic-webfont.1739fc5df12760af8fee.woff",
@@ -18,11 +18,11 @@
     "static/media/confirm.webp": "/my-app/static/media/confirm.5f9556b42625c8416d80.webp",
     "index.html": "/my-app/index.html",
     "main.8d07776f.css.map": "/my-app/static/css/main.8d07776f.css.map",
-    "main.bd462c2d.js.map": "/my-app/static/js/main.bd462c2d.js.map",
+    "main.c81e15ea.js.map": "/my-app/static/js/main.c81e15ea.js.map",
     "787.d4aba7ab.chunk.js.map": "/my-app/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8d07776f.css",
-    "static/js/main.bd462c2d.js"
+    "static/js/main.c81e15ea.js"
   ]
 }
