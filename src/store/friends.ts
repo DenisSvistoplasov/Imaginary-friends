@@ -1,7 +1,7 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { friendsAPI } from "../firebaseAPI";
+import { FriendData } from "../types";
 import { RootState } from "./store";
-import { IFriend } from "../types/friend";
-import { friendsAPI } from "../firebase/api";
 
 export const getFriends = createAsyncThunk(
   'users/getFriends',
@@ -11,7 +11,7 @@ export const getFriends = createAsyncThunk(
 );
 
 interface FriendsSlice {
-  data: IFriend[];
+  data: FriendData[];
   meta: {
     isLoading: boolean;
   };
@@ -24,23 +24,23 @@ const initialState: FriendsSlice = {
   }
 };
 
-export const friendsSlice = createSlice({
+const friendsSlice = createSlice({
   name: 'friends',
   initialState,
   extraReducers(builder) {
     builder.addCase(getFriends.pending, (state, action) => {
       state.meta.isLoading = true;
     });
-    builder.addCase(getFriends.fulfilled, (state, action: PayloadAction<IFriend[]>) => {
+    builder.addCase(getFriends.fulfilled, (state, action: PayloadAction<FriendData[]>) => {
       state.data = action.payload;
       state.meta.isLoading = false;
     });
   },
   reducers: {
-    addFriend(state, action: PayloadAction<IFriend>) {
+    addFriend(state, action: PayloadAction<FriendData>) {
       state.data.push(action.payload);
     },
-    editFriend(state, action: PayloadAction<IFriend>) {
+    editFriend(state, action: PayloadAction<FriendData>) {
       const index = state.data.findIndex(friend => friend.id === action.payload.id);
       state.data[index] = action.payload;
     },

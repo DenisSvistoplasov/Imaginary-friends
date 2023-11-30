@@ -1,6 +1,4 @@
-@use '../../mixins.scss' as *;
-
-$pink: #f49;
+@use '../../styles/mixins.scss' as *;
 
 .form {
   display: grid;
@@ -12,8 +10,8 @@ $pink: #f49;
   gap: 20px;
   padding: 20px;
   border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 0 15px 6px $pink;
+  background-color: $white;
+  box-shadow: 0 0 15px 6px $primary;
   text-shadow: 0 0 4px rgba($color: #000000, $alpha: .5);
 
   @include withTablet {
@@ -27,7 +25,7 @@ $pink: #f49;
       'save img' 1fr
       'cancel img' 1fr /
       1fr 1fr;
-      gap: 15px;
+    gap: 15px;
   }
 }
 
@@ -37,7 +35,7 @@ $pink: #f49;
   margin: 0;
   text-align: center;
   padding: 10px 8px;
-  background-color: $pink;
+  background-color: $primary;
 
   @include withTablet {
     padding: 8px 8px;
@@ -51,7 +49,7 @@ $pink: #f49;
   grid-template: 1fr 1fr / auto 1fr;
   gap: 15px 10px;
   padding: 8px;
-  background-color: $pink;
+  background-color: $primary;
 
   @include withTablet {
     grid-template: auto / auto;
@@ -67,10 +65,10 @@ $pink: #f49;
   min-width: 100px;
   padding: 3px 4px;
   border: none;
-  color: darken($pink, 13%);
+  color: darken($primary, 13%);
   user-select: all;
 
-  &::placeholder{
+  &::placeholder {
     color: #999;
   }
 
@@ -82,29 +80,28 @@ $pink: #f49;
 }
 
 .btn {
+  @include buttonLightTheme;
   justify-self: center;
   min-width: 70px;
   padding: 5px 10px;
   border-radius: 5px;
-  color: $pink;
+  color: $primary;
   font-weight: 600;
   background-color: #fff;
-  box-shadow: 0 0 3px #fff, 0 0 10px $pink, 0 0 15px $pink, 0 0 20px 0 $pink, 0 0 25px 0 $pink;
+  box-shadow: 0 0 3px #fff, 0 0 10px $primary, 0 0 15px $primary, 0 0 20px 0 $primary, 0 0 25px 0 $primary;
   transition: box-shadow .25s ease-in-out, background-color .25s ease-in-out;
 
   &:hover {
-    box-shadow: 0 0 3px #fff, 0 0 8px $pink, 0 0 8px $pink, 0 0 13px 0 $pink, 0 0 15px 0 $pink;
+    box-shadow: 0 0 3px #fff, 0 0 8px $primary, 0 0 8px $primary, 0 0 13px 0 $primary, 0 0 15px 0 $primary;
   }
 
   &:active {
-    box-shadow: 0 0 3px #fff, 0 0 4px $pink, 0 0 4px $pink, 0 0 5px 0 $pink, 0 0 5px 0 $pink;
-    background-color: lighten($pink, 25%);
+    box-shadow: 0 0 3px #fff, 0 0 4px $primary, 0 0 4px $primary, 0 0 5px 0 $primary, 0 0 5px 0 $primary;
   }
 
   &:disabled {
     color: #aaa;
     box-shadow: 0 0 25px #777;
-    cursor: auto;
   }
 
   @include withMobile {
@@ -116,11 +113,11 @@ $pink: #f49;
   }
 }
 
-.saveBtn{
+.saveBtn {
   grid-area: save;
 }
 
-.cancelBtn{
+.cancelBtn {
   display: none;
   grid-area: cancel;
 
@@ -134,5 +131,5 @@ $pink: #f49;
   align-self: stretch;
   width: 100%;
   object-fit: contain;
-  box-shadow: 0 0 8px $pink;
+  box-shadow: 0 0 8px $primary;
 }

@@ -1,9 +1,9 @@
 import styles from './Header.module.scss';
 
-interface IHeaderProps{
+interface HeaderProps {
 }
 
-export function Header({}: IHeaderProps) {
+export function Header({}: HeaderProps) {
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.title}>Imaginary friends</h1>

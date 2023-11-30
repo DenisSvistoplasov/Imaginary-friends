@@ -1,0 +1,15 @@
+@use './styles/mixins' as *;
+
+@import 
+'normalize.css',
+'./styles/typography',
+'./styles/reset'
+;
+
+body {
+  margin: 0;
+  font-family: 'Comic neue', 'Comic Sans MS', cursive;
+  color: $fontColor;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

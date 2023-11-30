@@ -1,13 +1,13 @@
 import styles from './Sidebar.module.scss';
-import { Navigation } from './Navigation/Navigation';
+import { Navigation } from '../Navigation/Navigation';
 
-interface ISidebarProps{
+interface SidebarProps {
 }
 
-export function Sidebar({}: ISidebarProps) {
+export function Sidebar({}: SidebarProps) {
   return (
     <aside className={styles.wrapper}>
-      <Navigation/>
+      <Navigation />
     </aside>
   );
 }

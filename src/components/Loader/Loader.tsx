@@ -1,8 +1,8 @@
-import { classnames } from '../../utils/classnames';
+import classNames from 'classnames';
 import styles from './Loader.module.scss';
 
 export function Loader({ className = '', size = 100, dark = false, center = false }) {
-  const classes = classnames(
+  const classes = classNames(
     styles.loader,
     className,
     {

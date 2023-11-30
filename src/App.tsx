@@ -5,7 +5,7 @@ import { Content } from './components/Content/Content';
 import { Footer } from './components/Footer/Footer';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { store } from './store/store';
+import { store } from './store';
 
 function App() {
   return (

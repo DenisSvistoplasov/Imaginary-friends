@@ -1,4 +1,4 @@
-@use '../../mixins.scss' as *;
+@use '../../styles/mixins.scss' as *;
 
 .wrapper {
   width: 100%;
@@ -32,5 +32,5 @@ $light: rgba(#fff, .6);
   font-size: 14px;
   font-weight: 600;
   box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 8px $pink, 0 0 12px 1px $pink, 0 0 16px 2px $pink;
-  @include glitter($pink, $light);
+  @include sparkling($pink, $light);
 }

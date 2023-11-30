@@ -1,22 +1,22 @@
-import { ReactNode, useRef } from 'react';
+import { ReactNode } from 'react';
 import styles from './WithPreloader.module.scss';
 import { Loader } from '../Loader/Loader';
-import { classnames } from '../../utils/classnames';
+import classNames from 'classnames';
 
-interface IWithPreloaderProps {
+interface WithPreloaderProps {
   isLoading: boolean;
   children: ReactNode;
   className?: string;
 }
 
-export function WithPreloader({ isLoading, children, className }: IWithPreloaderProps) {
+export function WithPreloader({ isLoading, children, className }: WithPreloaderProps) {
 
   return (
-    <div className={classnames(styles.wrapper, className)}>
+    <div className={classNames(styles.wrapper, className)}>
       <div className={styles.inner}>
         {children}
       </div>
-      {isLoading && <Loader className={styles.loader} dark/>}
+      {isLoading && <Loader className={styles.loader} dark />}
     </div>
   );
 }

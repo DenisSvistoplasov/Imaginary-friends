@@ -1,0 +1,122 @@
+$primary: #f49;
+$fontColor: #fff;
+$white: #fff;
+$grey:#ddd;
+
+@mixin buttonTheme() {
+  & {
+    color: $fontColor;
+    background-color: $primary;
+    transition: background-color .2s ease-in-out;
+    path{
+      fill: $primary;
+      transition: fill .2s ease-in-out;
+    }
+  }
+
+  $statusColors: (
+    hover: darken($primary, 7%),
+    active: lighten($primary, 7%),
+    disabled: $grey,
+  );
+
+  @each $status, $bgColor in $statusColors {
+    &:#{$status} {
+      background-color: $bgColor;
+
+      path {
+        fill: $bgColor;
+      }
+    }
+  }
+}
+
+@mixin buttonLightTheme() {
+  & {
+    color: $primary;
+    background-color: $white;
+    transition: background-color .2s ease-in-out;
+    path{
+      fill: $white;
+      transition: fill .2s ease-in-out;
+    }
+  }
+
+  $statusColors: (
+    hover: lighten($primary, 27%),
+    active: lighten($primary, 20%),
+    disabled: $grey,
+  );
+
+  @each $status, $bgColor in $statusColors {
+    &:#{$status} {
+      background-color: $bgColor;
+
+      path {
+        fill: $bgColor;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+$tabletBreakpoint: 768px;
+$mobileBreakpoint: 420px;
+
+@mixin withTablet {
+  @media (max-width: $tabletBreakpoint) {
+    @content;
+  }
+}
+
+@mixin withMobile {
+  @media (max-width: $mobileBreakpoint) {
+    @content;
+  }
+}
+
+@mixin textShadow {
+  text-shadow: 0 0 4px rgba($color: #000000, $alpha: .5);
+}
+
+@mixin sparkling($bgColor, $light) {
+  $center1: 15% 25%;
+  $center2: 85% 75%;
+  $center3: 15% 75%;
+  $center4: 85% 25%;
+  $center5: 50% 50%;
+  $r1: 2px;
+  $r2: 10px;
+  $spark1: radial-gradient(circle at $center1, $light, $light $r1, transparent $r2);
+  $spark2: radial-gradient(circle at $center2, $light, $light $r1, transparent $r2);
+  $spark3: radial-gradient(circle at $center3, $light, $light $r1, transparent $r2);
+  $spark4: radial-gradient(circle at $center4, $light, $light $r1, transparent $r2);
+  $spark5: radial-gradient(circle at $center5, $light, $light $r1, transparent $r2);
+
+  @keyframes moveCenter {
+    0% {
+      background: $spark1, $spark2, $bgColor;
+    }
+
+    33% {
+      background: $spark5, $bgColor;
+    }
+
+    66% {
+      background: $spark4, $spark3, $bgColor;
+    }
+
+    100% {
+      background: $spark1, $spark2, $bgColor;
+    }
+  }
+
+  animation: moveCenter .3s infinite;
+}

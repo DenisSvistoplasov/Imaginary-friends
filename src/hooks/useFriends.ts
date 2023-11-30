@@ -1,10 +1,9 @@
 import { useEffect } from "react";
-import { selectFriendsData, selectFriendsMeta, getFriends, addFriend, deleteFriend, editFriend } from "../store/friends";
-import { useAppDispatch, useAppSelector } from "../store/store";
-import { friendsAPI } from "../firebase/api";
-import { IFormData } from "../types/formData";
-import { IFriend } from "../types/friend";
+import { friendsAPI } from "../firebaseAPI";
+import { FormData } from "../types";
+import { FriendData } from "../types";
 import { createId } from "../utils/createId";
+import { addFriend, deleteFriend, editFriend, getFriends, selectFriendsData, selectFriendsMeta, useAppDispatch, useAppSelector } from "../store";
 
 export function useFriends() {
   const dispatch = useAppDispatch();
@@ -15,7 +14,7 @@ export function useFriends() {
     dispatch(getFriends());
   }, []);
 
-  const create = (data: IFormData) => {
+  const create = (data: FormData) => {
     const friend = {
       ...data,
       id: createId()
@@ -25,7 +24,7 @@ export function useFriends() {
     friendsAPI.createFriend(friend);
   };
 
-  const update = (friend: IFriend) => {
+  const update = (friend: FriendData) => {
     dispatch(editFriend(friend));
     friendsAPI.editFriend(friend);
   };

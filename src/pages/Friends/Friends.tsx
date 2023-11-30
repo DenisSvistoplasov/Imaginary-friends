@@ -1,17 +1,17 @@
 import styles from './Friends.module.scss';
-import { WithPreloader } from '../WithPreloader/WithPreloader';
-import { Friend } from '../Friend/Friend';
-import { useFriends } from '../../hooks/useFriends';
+import { WithPreloader } from '../../components/WithPreloader/WithPreloader';
+import { Friend } from '../../components/Friend/Friend';
+import { useFriends } from '../../hooks';
 import { useMemo, useState } from 'react';
-import { IFriend } from '../../types/friend';
-import { FriendsModal } from '../FriendsModal/FriendsModal';
+import { FriendData } from '../../types';
+import { FriendsModal } from '../../components/FriendsModal/FriendsModal';
 
-interface IFriendsProps {
+interface FriendsProps {
 }
 
-export function Friends({}: IFriendsProps) {
+export function Friends({}: FriendsProps) {
   const [isModalOpened, setIsModalOpened] = useState(false);
-  const [currentFriend, setCurrentFriend] = useState<IFriend | null>(null);
+  const [currentFriend, setCurrentFriend] = useState<FriendData | null>(null);
   const [isDeletion, setIsDeletion] = useState(false);
   const { friends, isLoading, create, update, remove } = useFriends();
 
@@ -23,12 +23,12 @@ export function Friends({}: IFriendsProps) {
     setIsModalOpened(false);
   };
 
-  const onFriendClick = (friend: IFriend) => {
+  const onFriendClick = (friend: FriendData) => {
     setCurrentFriend(friend);
     openModal();
   };
 
-  const onDeleteClick = (friend: IFriend) => {
+  const onDeleteClick = (friend: FriendData) => {
     setCurrentFriend(friend);
     setIsDeletion(true);
     openModal();

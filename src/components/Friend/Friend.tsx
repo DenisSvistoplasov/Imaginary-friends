@@ -1,26 +1,25 @@
 import styles from './Friend.module.scss';
-import { IFriend } from '../../types/friend';
-import { IconDelete } from '../IconDelete';
-import defaultImg from '../../assets/images/defaultFriendImage.webp';
+import { FriendData } from '../../types';
+import { IconDelete } from '../Icons/IconDelete';
+import { FallbackedImage } from '../FallbackedImage/FallbackedImage';
 
-
-interface IFriendProps {
-  friend: IFriend;
-  onFriendClick: (friend: IFriend) => void;
-  onDeleteClick: (friend: IFriend) => void;
+interface FriendProps {
+  friend: FriendData;
+  onFriendClick: (friend: FriendData) => void;
+  onDeleteClick: (friend: FriendData) => void;
 }
 
-export function Friend({ friend, onFriendClick, onDeleteClick }: IFriendProps) {
+export function Friend({ friend, onFriendClick, onDeleteClick }: FriendProps) {
 
   return (
     <div className={styles.wrapper}>
       <button className={styles.itemBtn} onClick={() => onFriendClick(friend)}>
-        <img src={friend.img || defaultImg} alt="friend avatar" className={styles.img} />
+        <FallbackedImage src={friend.img} alt="friend avatar" className={styles.img} />
         <div className={styles.name}>{friend.name}</div>
       </button>
 
       <button className={styles.deleteBtn} onClick={() => onDeleteClick(friend)}>
-        <IconDelete/>
+        <IconDelete />
       </button>
     </div>
   );

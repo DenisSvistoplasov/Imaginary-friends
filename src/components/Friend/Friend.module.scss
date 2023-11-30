@@ -1,3 +1,5 @@
+@use '../../styles/mixins' as *;
+
 .wrapper{
   position: relative;
   display: flex;
@@ -11,8 +13,6 @@
   background: url('/assets/images/friend_bg.webp') left top / cover;
   box-shadow: 0 0 5px rgba($color: #000, $alpha: .6);
 }
-
-$pink: #f5a;
 
 .itemBtn{
   display: flex;
@@ -32,12 +32,12 @@ $pink: #f5a;
 .itemBtn:hover{
   z-index: 2;
   background-color: #fff;
-  box-shadow: 0 0 10px 4px $pink;
+  box-shadow: 0 0 10px 4px $primary;
   transform: translateY(-4px) rotate(-1deg);
 }
 .itemBtn:active{
   transform: translateY(0) rotate(0);
-  box-shadow: 0 0 10px 5px adjust-hue($pink, -150deg);
+  box-shadow: 0 0 10px 5px adjust-hue($primary, -150deg);
 }
 
 
@@ -59,19 +59,14 @@ $pink: #f5a;
 }
 
 .deleteBtn{
+  @include buttonTheme;
   position: absolute;
   top: 0;
   right: 0;
+  background-color: transparent !important;
 
   svg{
     width: 28px;
     height: auto;
-    g path{
-      transition: fill .2s ease-in-out;
-    }
-  }
-
-  &:hover svg g path{
-      fill:#f05;
   }
 }

@@ -1,6 +1,4 @@
-@use '../../mixins.scss' as *;
-
-$pink: #f5a;
+@use '../../styles/mixins.scss' as *;
 
 .wrapper {
   position: relative;
@@ -9,9 +7,8 @@ $pink: #f5a;
   gap: 20px;
   margin-bottom: 170px;
   padding: 45px 45px 30px;
-  // border-radius: 60px 60px 0;
   border-radius: 50%;
-  background-color: $pink;
+  background-color: $primary;
 
   @include withMobile {
     gap: 10px;
@@ -63,7 +60,7 @@ $pink: #f5a;
   i {
     font-weight: 600;
     font-size: 27px;
-    text-shadow: 0 0 5px rgba(#00f, .6);
+    text-shadow: 0 0 6px rgba(#04e, .75);
 
     @include withMobile {
       font-size: 21px;
@@ -114,27 +111,13 @@ $pink: #f5a;
 }
 
 .btn {
+  @include buttonLightTheme;
   min-width: 60px;
   padding: 5px 10px 3px;
-  background-color: #fff;
   border-bottom: 2px solid transparent;
   border-radius: 3px;
-  color: #f3a;
   font-size: 18px;
   text-transform: uppercase;
-  transition-property: color, border-color;
-  transition-duration: .2s;
-  transition-timing-function: ease-in-out;
-}
-
-.yes:hover {
-  color: #f13;
-  border-bottom-color: #f13;
-}
-
-.no:hover {
-  color: #0c3;
-  border-bottom-color: #0c3;
 }
 
 .tail {
@@ -146,8 +129,6 @@ $pink: #f5a;
   height: auto;
   transform: translate(-25%);
 
-
-
   @include withTablet {
     width: 120px;
   }
@@ -157,6 +138,6 @@ $pink: #f5a;
   }
 
   path {
-    fill: $pink;
+    fill: $primary;
   }
 }

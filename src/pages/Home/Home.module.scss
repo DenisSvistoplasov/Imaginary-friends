@@ -1,4 +1,4 @@
-@use '../../mixins.scss' as *;
+@use '../../styles/mixins.scss' as *;
 
 .wrapper {
   color: #fff;
@@ -22,6 +22,7 @@
       'desc3 desc3' /
       1fr 1fr;
   }
+
   @include withMobile {
     grid-template:
       'desc1 img1' 130px
@@ -41,7 +42,8 @@
     font-size: 22px;
     align-self: center;
     text-align: center;
-    @include withTablet{
+
+    @include withTablet {
       font-size: 20px;
     }
   }
@@ -50,7 +52,8 @@
 .title {
   padding: 0 10px;
   text-align: center;
-  @include withTablet{
+
+  @include withTablet {
     margin: 13px 0;
     font-size: 22px;
   }

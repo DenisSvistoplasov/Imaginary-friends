@@ -1,23 +1,23 @@
-import { IFormData } from '../../types/formData';
-import { IFriend } from '../../types/friend';
+import { FormData } from '../../types';
+import { FriendData } from '../../types';
 import { DeletionConfirm } from '../DeletionConfirm/DeletionConfirm';
 import { FriendForm } from '../FriendForm/FriendForm';
 import { ModalWrapper } from '../ModalWrapper/ModalWrapper';
 import styles from './FriendsModal.module.scss';
 
-interface IFriendsModalProps {
-  currentFriend: IFriend | null;
+interface FriendsModalProps {
+  currentFriend: FriendData | null;
   isDeletion: boolean;
   closeModal: () => void;
-  create: (friend: IFormData) => void;
-  update: (friend: IFriend) => void;
+  create: (friend: FormData) => void;
+  update: (friend: FriendData) => void;
   remove: (id: string) => void;
 }
 
-export function FriendsModal({ isDeletion, closeModal, currentFriend, create, update, remove }: IFriendsModalProps) {
+export function FriendsModal({ isDeletion, closeModal, currentFriend, create, update, remove }: FriendsModalProps) {
   const onSubmit = currentFriend ?
-    (data: IFormData) => { update({ ...data, id: currentFriend.id }); closeModal(); } :
-    (data: IFormData) => { create(data); closeModal(); };
+    (data: FormData) => { update({ ...data, id: currentFriend.id }); closeModal(); } :
+    (data: FormData) => { create(data); closeModal(); };
 
   const onRemove = () => {
     remove(currentFriend?.id || '');

@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import styles from './Navigation.module.scss';
-import { Paths } from '../../../constants/paths';
+import { Paths } from '../../constants';
 
-interface INavigationProps {
+interface NavigationProps {
 }
 
-export function Navigation({}: INavigationProps) {
+export function Navigation({}: NavigationProps) {
 
   const linkClassName = ({ isActive = false }) =>
     [
