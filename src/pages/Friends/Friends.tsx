@@ -2,7 +2,7 @@ import styles from './Friends.module.scss';
 import { WithPreloader } from '../../components/WithPreloader/WithPreloader';
 import { Friend } from '../../components/Friend/Friend';
 import { useFriends } from '../../hooks';
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { FriendData } from '../../types';
 import { FriendsModal } from '../../components/FriendsModal/FriendsModal';
 
@@ -31,7 +31,7 @@ export function Friends() {
     openModal();
   };
 
-  const list = useMemo(() => friends.map(friend => (
+  const list = friends.map(friend => (
     <li className={styles.item} key={friend.id}>
       <Friend
         friend={friend}
@@ -39,7 +39,7 @@ export function Friends() {
         onDeleteClick={onDeleteClick}
       />
     </li>
-  )), [friends, onFriendClick, onDeleteClick]);
+  ));
 
   const isEmpty = !list.length;
 
