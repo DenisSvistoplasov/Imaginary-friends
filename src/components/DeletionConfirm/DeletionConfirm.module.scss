@@ -77,9 +77,10 @@
   flex-shrink: 0;
   width: 60px;
   aspect-ratio: 3/4;
-  border: 3px solid #302;
+  border: 5px solid #302;
   border-radius: 5px;
   background-color: #eac;
+  filter: grayscale(.8);
   overflow: hidden;
 
   &::after {
@@ -88,7 +89,7 @@
     top: 75%;
     left: 25%;
     width: 100%;
-    height: 7px;
+    height: 8px;
     background-color: #000;
     transform: rotate(-45deg);
   }
