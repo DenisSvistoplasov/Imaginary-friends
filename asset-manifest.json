@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Imaginary-friends/static/css/main.53271b1f.css",
-    "main.js": "/Imaginary-friends/static/js/main.d38f7f60.js",
+    "main.css": "/Imaginary-friends/static/css/main.19f881ff.css",
+    "main.js": "/Imaginary-friends/static/js/main.cb122ad2.js",
     "static/media/comicneue-italic-webfont.woff": "/Imaginary-friends/static/media/comicneue-italic-webfont.a5f2392d3ef7ac47b0b9.woff",
     "static/media/comicneue-bolditalic-webfont.woff": "/Imaginary-friends/static/media/comicneue-bolditalic-webfont.1739fc5df12760af8fee.woff",
     "static/media/comicneue-bold-webfont.woff": "/Imaginary-friends/static/media/comicneue-bold-webfont.c3cc9a9726b05b696e1f.woff",
@@ -16,11 +16,11 @@
     "static/media/defaultFriendImage.webp": "/Imaginary-friends/static/media/defaultFriendImage.c00f9ead272da9c630ed.webp",
     "static/media/confirm.webp": "/Imaginary-friends/static/media/confirm.5f9556b42625c8416d80.webp",
     "index.html": "/Imaginary-friends/index.html",
-    "main.53271b1f.css.map": "/Imaginary-friends/static/css/main.53271b1f.css.map",
-    "main.d38f7f60.js.map": "/Imaginary-friends/static/js/main.d38f7f60.js.map"
+    "main.19f881ff.css.map": "/Imaginary-friends/static/css/main.19f881ff.css.map",
+    "main.cb122ad2.js.map": "/Imaginary-friends/static/js/main.cb122ad2.js.map"
   },
   "entrypoints": [
-    "static/css/main.53271b1f.css",
-    "static/js/main.d38f7f60.js"
+    "static/css/main.19f881ff.css",
+    "static/js/main.cb122ad2.js"
   ]
 }
