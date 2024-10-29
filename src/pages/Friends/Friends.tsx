@@ -39,7 +39,7 @@ export function Friends() {
         onDeleteClick={onDeleteClick}
       />
     </li>
-  )), [friends]);
+  )), [friends, onFriendClick, onDeleteClick]);
 
   const isEmpty = !list.length;
 
