@@ -8,7 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment: production  # Use the "production" environment defined in Settings
+    environment: github-pages  # Use the "production" environment defined in Settings
 
     steps:
       - name: Check out the code
