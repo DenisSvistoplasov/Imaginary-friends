@@ -6,10 +6,7 @@ import { useMemo, useState } from 'react';
 import { FriendData } from '../../types';
 import { FriendsModal } from '../../components/FriendsModal/FriendsModal';
 
-interface FriendsProps {
-}
-
-export function Friends({}: FriendsProps) {
+export function Friends() {
   const [isModalOpened, setIsModalOpened] = useState(false);
   const [currentFriend, setCurrentFriend] = useState<FriendData | null>(null);
   const [isDeletion, setIsDeletion] = useState(false);

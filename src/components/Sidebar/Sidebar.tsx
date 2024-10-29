@@ -1,10 +1,7 @@
 import styles from './Sidebar.module.scss';
 import { Navigation } from '../Navigation/Navigation';
 
-interface SidebarProps {
-}
-
-export function Sidebar({}: SidebarProps) {
+export function Sidebar() {
   return (
     <aside className={styles.wrapper}>
       <Navigation />

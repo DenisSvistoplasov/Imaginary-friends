@@ -12,7 +12,7 @@ export function useFriends() {
 
   useEffect(() => {
     dispatch(getFriends());
-  }, []);
+  }, [dispatch]);
 
   const create = (data: FormData) => {
     const friend = {

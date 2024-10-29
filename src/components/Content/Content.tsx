@@ -4,10 +4,7 @@ import { Home } from '../../pages/Home/Home';
 import { Paths } from '../../constants';
 import { Friends } from '../../pages/Friends/Friends';
 
-interface ContentProps {
-}
-
-export function Content({}: ContentProps) {
+export function Content() {
   return (
     <div className={styles.wrapper}>
       <Routes>

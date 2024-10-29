@@ -1,5 +1,4 @@
 import { useImageFallback } from '../../hooks';
-import styles from './FallbackedImage.module.scss';
 
 interface FallbackedImageProps{
   [key: string]: any;
@@ -8,6 +7,6 @@ interface FallbackedImageProps{
 export function FallbackedImage(props: FallbackedImageProps) {
   const onError = useImageFallback();
   return (
-    <img onError={onError} {...props} />
+    <img alt='fallback' onError={onError} {...props} />
   );
 }

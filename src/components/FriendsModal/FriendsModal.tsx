@@ -3,7 +3,6 @@ import { FriendData } from '../../types';
 import { DeletionConfirm } from '../DeletionConfirm/DeletionConfirm';
 import { FriendForm } from '../FriendForm/FriendForm';
 import { ModalWrapper } from '../ModalWrapper/ModalWrapper';
-import styles from './FriendsModal.module.scss';
 
 interface FriendsModalProps {
   currentFriend: FriendData | null;

@@ -1,9 +1,6 @@
 import styles from './Footer.module.scss';
 
-interface FooterProps {
-}
-
-export function Footer({}: FooterProps) {
+export function Footer() {
   return (
     <div className={styles.wrapper}>
       2023
