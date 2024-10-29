@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Imaginary-friends/static/css/main.19f881ff.css",
+    "main.css": "/Imaginary-friends/static/css/main.be757c63.css",
     "main.js": "/Imaginary-friends/static/js/main.c1615022.js",
     "static/media/comicneue-italic-webfont.woff": "/Imaginary-friends/static/media/comicneue-italic-webfont.a5f2392d3ef7ac47b0b9.woff",
     "static/media/comicneue-bolditalic-webfont.woff": "/Imaginary-friends/static/media/comicneue-bolditalic-webfont.1739fc5df12760af8fee.woff",
@@ -16,11 +16,11 @@
     "static/media/defaultFriendImage.webp": "/Imaginary-friends/static/media/defaultFriendImage.c00f9ead272da9c630ed.webp",
     "static/media/confirm.webp": "/Imaginary-friends/static/media/confirm.5f9556b42625c8416d80.webp",
     "index.html": "/Imaginary-friends/index.html",
-    "main.19f881ff.css.map": "/Imaginary-friends/static/css/main.19f881ff.css.map",
+    "main.be757c63.css.map": "/Imaginary-friends/static/css/main.be757c63.css.map",
     "main.c1615022.js.map": "/Imaginary-friends/static/js/main.c1615022.js.map"
   },
   "entrypoints": [
-    "static/css/main.19f881ff.css",
+    "static/css/main.be757c63.css",
     "static/js/main.c1615022.js"
   ]
 }
